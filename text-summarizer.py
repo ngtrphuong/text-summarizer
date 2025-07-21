@@ -7,8 +7,8 @@ import numpy as np
 import networkx as nx
  
 def read_article(file_name):
-    file = open(file_name, "r")
-    filedata = file.readlines()
+    with open(file_name, "r") as file:
+        filedata = file.readlines()
     article = filedata[0].split(". ")
     sentences = []
 
